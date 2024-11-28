@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Activities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <img src="uploads/me.jpeg" alt="My Photo">
+            <h1>Hello! I'm <span class="highlight">Ray Gabriel Asenjo</span></h1>
+            <p class="subtitle">Student at Army's Angels Integrated School Inc.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hi! I'm Gab, a student at Army's Angels Integrated School Inc. I love staying active and playing basketball with my friends. In my free time, you can usually find me at the gym or playing video games.</p>
+                <p class="extra-details">I also enjoy learning about cars and trying out new recipes in the kitchen whenever I can.</p>
+            </div>
+            <div class="skills">
+                <h3>Things I Love</h3>
+                <ul>
+                    <li>🏋️ Going to the Gym</li>
+                    <li>🎮 Playing Video Games</li>
+                    <li>🏀 Basketball</li>
+                    <li>👨 Boxing</li>
+                    <li>🚗 Cars</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Gallery</h2>
+        <div class="project-grid">
+            <div class="photo-card">
+                <img src="uploads/1.jpeg" alt="Photo 1">
+            </div>
+            <div class="photo-card">
+                <img src="uploads/2.jpeg" alt="Photo 2">
+            </div>
+            <div class="photo-card">
+                <img src="uploads/3.jpeg" alt="Photo 3">
+            </div>
+            <div class="photo-card">
+                <img src="uploads/4.jpeg" alt="Photo 4">
+            </div>
+            <div class="photo-card">
+                <img src="uploads/5.jpeg" alt="Photo 5">
+            </div>
+            <div class="photo-card">
+                <img src="uploads/6.jpeg" alt="Photo 6">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gabriel Asenjo. Empowerment Technology.</p>
+    </footer>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe elements
+        document.querySelectorAll('.about-text, .skills, .photo-card').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html> 
