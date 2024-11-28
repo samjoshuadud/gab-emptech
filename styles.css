@@ -7,7 +7,6 @@
     --border-color: #E2E8F0;
 }
 
-/* Base styles */
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -16,7 +15,6 @@ body {
     margin: 0;
 }
 
-/* Unique Header */
 header {
     position: fixed;
     width: 100%;
@@ -62,7 +60,6 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Modern Sections */
 section {
     padding: 7rem 2rem;
     min-height: 100vh;
@@ -71,7 +68,6 @@ section {
     justify-content: center;
 }
 
-/* Unique Hero Section */
 #home {
     background: var(--primary-color);
     position: relative;
@@ -144,7 +140,6 @@ section {
     margin-top: 0;
 }
 
-/* Creative About Section */
 #about {
     background: var(--primary-color);
     position: relative;
@@ -184,7 +179,7 @@ section {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* Changed to equal columns */
+    grid-template-columns: 1fr 1fr;  
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -281,7 +276,6 @@ section {
     left: 100%;
 }
 
-/* Update Projects/Gallery Section */
 #projects {
     background: var(--primary-color);
     position: relative;
@@ -381,7 +375,6 @@ section {
     opacity: 1;
 }
 
-/* Stylish Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -389,7 +382,6 @@ footer {
     color: white;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .hero {
         grid-template-columns: 1fr;
@@ -483,19 +475,16 @@ footer {
     }
 } 
 
-/* Add smooth scrolling to the whole page */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px; /* Accounts for fixed header */
 }
 
-/* Add loading animation for the page */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Navigation animations */
 nav a {
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -504,7 +493,6 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Hero section animations */
 .hero {
     animation: fadeIn 1s ease-out;
 }
@@ -524,7 +512,6 @@ nav a:hover {
     }
 }
 
-/* Animate hero text */
 .hero h1 {
     animation: slideIn 0.8s ease-out 0.3s both;
 }
@@ -544,7 +531,6 @@ nav a:hover {
     }
 }
 
-/* Add hover effect to the highlight */
 .highlight {
     position: relative;
     transition: color 0.3s ease;
@@ -554,7 +540,6 @@ nav a:hover {
     color: #60A5FA;
 }
 
-/* Animate about section cards on scroll */
 .about-text, .skills {
     opacity: 0;
     transform: translateY(20px);
@@ -566,7 +551,6 @@ nav a:hover {
     transform: translateY(0);
 }
 
-/* Enhanced skills list animation */
 .skills li {
     position: relative;
     overflow: hidden;
@@ -592,7 +576,6 @@ nav a:hover {
     left: 100%;
 }
 
-/* Gallery card animations */
 .photo-card {
     opacity: 0;
     transform: translateY(20px);
@@ -604,4 +587,3 @@ nav a:hover {
     transform: translateY(0);
 }
 
-/* Add this JavaScript to your HTML file */ 

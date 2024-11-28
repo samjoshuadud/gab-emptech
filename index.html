@@ -78,7 +78,6 @@
     </footer>
 
     <script>
-        // Intersection Observer for scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -87,12 +86,10 @@
             });
         }, { threshold: 0.1 });
 
-        // Observe elements
         document.querySelectorAll('.about-text, .skills, .photo-card').forEach((el) => {
             observer.observe(el);
         });
 
-        // Smooth scroll for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
